@@ -1,0 +1,3 @@
+mongodb:
+    log: gregor
+    pass: gregor123
