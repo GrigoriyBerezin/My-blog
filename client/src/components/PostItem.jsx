@@ -21,7 +21,7 @@ export const PostItem = ({ post }) => {
                 >
                     {post.imgUrl && (
                         <img
-                            src={`http://localhost:8080/${post.imgUrl}`}
+                            src={`http://localhost:3000/${post.imgUrl}`}
                             alt='img'
                             className='object-cover w-full rounded-3xl'
                         />
