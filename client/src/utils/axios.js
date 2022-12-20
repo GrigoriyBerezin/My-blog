@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const instance = axios.create({
-    baseURL: "http://localhost:3002/api",
+    baseURL: "http://localhost:8080/api",
 })
 // к каждому запросу добавляем headers.Authorization с нашим токеном
 instance.interceptors.request.use((config) => {

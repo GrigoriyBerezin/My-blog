@@ -16,12 +16,12 @@ export const PostItem = ({ post }) => {
             <div className='flex flex-col basis-1/4 flex-grow'>
                 <div
                     className={
-                        post.imgUrl ? "flex rouded-sm h-80" : "flex rounded-sm"
+                        post.imgUrl ? "flex rouded-sm h-81" : "flex rounded-sm"
                     }
                 >
                     {post.imgUrl && (
                         <img
-                            src={`http://localhost:3002/${post.imgUrl}`}
+                            src={`http://localhost:8080/${post.imgUrl}`}
                             alt='img'
                             className='object-cover w-full rounded-3xl'
                         />

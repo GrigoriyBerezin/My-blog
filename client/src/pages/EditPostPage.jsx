@@ -63,8 +63,8 @@ export const EditPostPage = () => {
             </label>
             <div className='flex object-cover py-2'>
                 {oldImage && (
-                    <img
-                        src={`http://localhost:3002/${oldImage}`}
+                    <img className="rounded-xl"
+                        src={`http://localhost:8080/${oldImage}`}
                         alt={oldImage.name}
                     />
                 )}
@@ -99,13 +99,13 @@ export const EditPostPage = () => {
             <div className='flex gap-8 items-center justify-center mt-4'>
                 <button
                     onClick={submitHandler}
-                    className='flex justify-center items-center bg-gray-600 text-xs text-white rounded-sm py-2 px-4'
+                    className='flex justify-center items-center bg-cyan-700 text-xs text-white rounded-xl py-2 px-4 hover:bg-cyan-600'
                 >
                     Обновить
                 </button>
                 <button
                     onClick={clearFormHandler}
-                    className='flex justify-center items-center bg-red-500 text-xs text-white rounded-sm py-2 px-4'
+                    className='flex justify-center items-center bg-red-500 text-xs text-white rounded-xl py-2 px-4 hover:bg-red-400'
                 >
                     Отменить
                 </button>

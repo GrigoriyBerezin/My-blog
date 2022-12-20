@@ -4,18 +4,35 @@ import dotenv from "dotenv"
 import cors from "cors"
 import fileUpload from "express-fileupload"
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 import authRoute from "./routes/auth.js"
 import postRoute from "./routes/posts.js"
 import commentRoute from "./routes/comments.js"
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 const app = express()
 dotenv.config()
 
 // Constans
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 8081
 const DB_USER = process.env.DB_USER
 const DB_PASSWORD = process.env.DB_PASSWORD
 // const DB_NAME = process.env.DB_NAME
+
+if (process.env.NODE_ENV === "production") {
+    app.use("/", express.static(path.join(__dirname, "client")))
+
+    const indexPath = path.join(__dirname, "client", "index.html")
+
+    app.get("*", (req, res) => {
+        res.sendFile(indexPath)
+    })
+}
 
 // Middleware
 app.use(cors())
@@ -24,7 +41,7 @@ app.use(express.json())
 app.use(express.static("uploads"))
 
 // Routes
-// http://localhost:3002
+// http://localhost:8080
 app.use("/api/auth", authRoute)
 app.use("/api/posts", postRoute)
 app.use("/api/comments", commentRoute)

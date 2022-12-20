@@ -81,7 +81,7 @@ export const PostPage = () => {
 
     return (
         <div>
-            <button className='flex justify-center items-center bg-green-600 text-xs text-white rounded-sm py-2 px-4'>
+            <button className='flex justify-center items-center bg-emerald-500 text-xs text-white rounded-xl py-2 px-4 hover:bg-emerald-400'>
                 <Link className='flex' to={"/"}>
                     Назад
                 </Link>
@@ -93,13 +93,13 @@ export const PostPage = () => {
                         <div
                             className={
                                 post?.imgUrl
-                                    ? "flex rouded-sm h-80"
+                                    ? "flex rouded-sm h-81"
                                     : "flex rounded-sm"
                             }
                         >
                             {post?.imgUrl && (
                                 <img
-                                    src={`http://localhost:3002/${post.imgUrl}`}
+                                    src={`http://localhost:8080/${post.imgUrl}`}
                                     alt='img'
                                     className='object-cover w-full rounded-3xl'
                                 />
@@ -148,7 +148,7 @@ export const PostPage = () => {
                         )}
                     </div>
                 </div>
-                <div className='w-1/3 h-1/3 p-8 bg-gray-700 flex flex-col gap-2 rounded-3xl'>
+                <div className='w-1/3 h-1/3 p-8 bg-blue-600 flex flex-col gap-2 rounded-3xl'>
                     <span className='flex text-xl text-white'>
                         Нам важен каждый комментарий
                     </span>
@@ -166,7 +166,7 @@ export const PostPage = () => {
                         <button
                             type='submit'
                             onClick={handleSubmit}
-                            className='flex justify-center items-center bg-gray-600 text-white rounded-sm py-2 px-4'
+                            className='flex justify-center items-cente bg-blue-800 text-white rounded-xl py-2 px-4 hover:bg-blue-700'
                         >
                             Отправить
                         </button>

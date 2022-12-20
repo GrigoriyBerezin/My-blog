@@ -28,7 +28,7 @@ export const Navbar = () => {
                         <NavLink
                             to={"/"}
                             href='/'
-                            className='text-xs text-gray-500 hover:text-white'
+                            className='text-xxs text-gray-500 hover:text-white'
                             style={({ isActive }) =>
                                 isActive ? activeStyles : undefined
                             }
@@ -40,7 +40,7 @@ export const Navbar = () => {
                         <NavLink
                             to={"/posts"}
                             href='/'
-                            className='text-xs text-gray-500 hover:text-white'
+                            className='text-xxs text-gray-500 hover:text-white'
                             style={({ isActive }) =>
                                 isActive ? activeStyles : undefined
                             }
@@ -52,7 +52,7 @@ export const Navbar = () => {
                         <NavLink
                             to='/new'
                             href='/'
-                            className='text-xs text-gray-500 hover:text-white'
+                            className='text-xxs text-gray-500 hover:text-white'
                             style={({ isActive }) =>
                                 isActive ? activeStyles : undefined
                             }
@@ -63,7 +63,7 @@ export const Navbar = () => {
                 </ul>
             )}
 
-            <div className='flex justify-center items-center bg-gray-600 text-xs text-white rounded-sm px-4 py-2 mr-5'>
+            <div className='flex justify-center items-center bg-blue-800 text-xs text-white rounded-lg px-4 py-2 mr-5 hover:bg-blue-700'>
                 {isAuth ? (
                     <button onClick={logoutHandler}>Выйти</button>
                 ) : (

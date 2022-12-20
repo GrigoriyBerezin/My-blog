@@ -56,7 +56,7 @@ export const LoginPage = () => {
                 <button
                     type='submit'
                     onClick={handleSubmit}
-                    className='flex justify-center items-center text-xs bg-gray-600 text-white rounded-sm py-2 px-4'
+                    className='flex justify-center items-center text-xs bg-cyan-700 text-white rounded-xl py-2 px-4 hover:bg-cyan-600'
                 >
                     Войти
                 </button>
