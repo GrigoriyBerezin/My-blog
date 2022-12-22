@@ -64,7 +64,7 @@ export const EditPostPage = () => {
             <div className='flex object-cover py-2'>
                 {oldImage && (
                     <img className="rounded-xl"
-                        src={`http://localhost:3000/${oldImage}`}
+                        src={`http://localhost:3002/${oldImage}`}
                         alt={oldImage.name}
                     />
                 )}

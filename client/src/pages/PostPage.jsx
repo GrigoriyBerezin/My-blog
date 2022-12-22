@@ -87,7 +87,7 @@ export const PostPage = () => {
                 </Link>
             </button>
 
-            <div className='flex gap-10 py-8'>
+            <div className='flex gap-10 py-8 px-8'>
                 <div className='w-2/3'>
                     <div className='flex flex-col basis-1/4 flex-grow'>
                         <div
@@ -99,7 +99,7 @@ export const PostPage = () => {
                         >
                             {post?.imgUrl && (
                                 <img
-                                    src={`http://localhost:3000/${post.imgUrl}`}
+                                    src={`http://localhost:3002/${post.imgUrl}`}
                                     alt='img'
                                     className='object-cover w-full rounded-3xl'
                                 />
