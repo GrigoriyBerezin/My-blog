@@ -24,7 +24,7 @@ app.use(express.json())
 app.use(express.static("uploads"))
 
 // Routes
-// http://localhost:8080
+// http://localhost:3002
 app.use("/api/auth", authRoute)
 app.use("/api/posts", postRoute)
 app.use("/api/comments", commentRoute)
